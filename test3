@@ -1,0 +1,64 @@
+users = []
+def insert():
+    user = dict()
+    user['name'] = input('name:')
+    user['family'] = input('family:')
+    user['number'] = int(input('number:'))
+    user['address'] = input('address:')
+    users.append(user)
+    print('list :', users)
+
+
+def delete():
+    for d in users:
+        user = dict()
+        user['name'] = input('name:')
+        user['family'] = input('family:')
+        user['number'] = int(input('number:'))
+        user['address'] = input('address:')
+        if d == user:
+            users.remove(d)
+            print('list :', users)
+        else:
+            print('user not found')
+            break
+
+
+def find():
+    for f in users:
+        nlist = []
+        user = dict()
+        user['name'] = input('name:')
+        user['family'] = input('family:')
+        user['number'] = int(input('number:'))
+        user['address'] = input('address:')
+        if f == user:
+            nlist.append(user)
+            users.remove(f)
+            print('new list :', nlist)
+            print('list :', users)
+        else:
+            print('user not found')
+            break
+            
+
+def plot():
+    print('list :', users)
+
+
+print('comand list : "i"nsert and "d"elete and "f"ind and "p"lot and "e"xit')
+while True:
+    c = input('COMAND:')
+    if c == 'i':
+        insert()
+    elif c == 'd':
+        delete()
+    elif c == 'f':
+        find()
+    elif c == 'p':
+        plot()
+    elif c == 'x':
+        break
+    else:
+        print('comand not found')
+        continue
